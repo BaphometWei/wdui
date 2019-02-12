@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页-有问必答</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <style>
+        .main{
+            width: 1000px;
+            margin:0 auto;
+            margin-top:15px;
+        }
+        .main-left{
+            background: #ffffff;
+            float: left;
+            width:740px;
+            height: 400px;
+            box-shadow: 0 1px 1px rgba(26, 26, 26, 0.1);
+            background-clip: content-box;
+        }
+        .main-right{
+            float:right;
+            width:245px;
+            height:200px;
+            background: #0C0C0C;
+        }
+        .main-left .title{
+            border-bottom: 1px solid #F6F6F6;
+        }
+        .main-left .title li{
+            height: 58px;
+            line-height: 58px;
+            display: inline-block;
+            padding: 0 20px;
+            font-size: 16px;
+            color: #1A1A1A;
+        }
+        .main-left .title li a{
+            padding: 19px 0;
+        }
+    </style>
+</head>
+<body>
+<header style="background: #ffffff"></header>
+<div class="main">
+    <div class="main-left">
+        <div class="title">
+            <ul class="nav">
+                <li class="item"><a style="border-bottom: 3px solid #FCC9C9;font-weight: 600;" href="/index">推介</a></li>
+                <li class="item"><a href="/index">关注</a></li>
+                <li class="item"><a href="/index">热榜</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-right">
+
+    </div>
+    <div class="clearfix"></div>
+    <div>666</div>
+</div>
+
+<script src="/layui/layui.js"></script>
+<script>
+    $(function () {
+        $("header").load("/pages/common/header.html");
+    })
+</script>
+</body>
+</html>

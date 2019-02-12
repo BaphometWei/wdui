@@ -1,0 +1,7 @@
+server:
+  port: 7523
+spring:
+  profiles:
+    active: dev
+  mvc:
+    static-path-pattern: /**
