@@ -1,5 +1,8 @@
 body{
-    background: #F6F6F6;
+    background: #f3f3f3;
+}
+a{
+    cursor: pointer;
 }
 .header{
     padding:6px 0;

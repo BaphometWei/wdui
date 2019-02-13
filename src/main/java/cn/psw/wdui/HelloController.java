@@ -24,4 +24,14 @@ public class HelloController {
     public String shouye(){
         return "/pages/index.html";
     }
+
+    @RequestMapping("/zhuye")
+    public String zhuye(){
+        return "/pages/user/zhuye.html";
+    }
+
+    @RequestMapping("/test")
+    public String test(){
+        return "/pages/test.html";
+    }
 }
