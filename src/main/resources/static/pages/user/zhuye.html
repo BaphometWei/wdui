@@ -67,6 +67,117 @@
         .userxx-footer a{
             color: #8590A6;
         }
+        .main-left,.main-right{
+            margin-top: 15px;
+        }
+        .main-left{
+            background: #ffffff;
+            float: left;
+            width:740px;
+            box-shadow: 0 1px 1px rgba(26, 26, 26, 0.1);
+            background-clip: content-box;
+        }
+        .main-left .title{
+            border-bottom: 1px solid #F6F6F6;
+        }
+        .main-left .title li{
+            height: 58px;
+            line-height: 58px;
+            display: inline-block;
+            padding: 0 20px;
+            font-size: 16px;
+            color: #1A1A1A;
+        }
+        .main-left .title li a{
+            padding: 19px 0;
+        }
+        .main-left .bankuai{
+            border-bottom: 1px solid #F6F6F6;
+        }
+        .main-left .bankuai h4{
+            font-weight: 600;
+            padding:10px 20px;
+        }
+        .problem{
+            padding:20px 15px;
+            border-bottom: 1px solid #e7e9ee;
+        }
+        .problem-title{
+            font-size: 18px;
+            font-weight: 600;
+            font-synthesis: style;
+            line-height: 1.6;
+            color: #1A1A1A;
+            margin-top: -4px;
+            margin-bottom: -4px;
+            padding:10px 0;
+        }
+        .problem-footer{
+            padding:10px 0;
+        }
+        .problem-footer button{
+            line-height: 20px;
+            margin-right: 12px;
+            border: none;
+            border-radius: 5%;
+            background: #ffffff;
+            height: 25px;
+            color: #8590A6;
+        }
+        .problem-footer i{
+            vertical-align: middle;
+        }
+        .problem-footer span{
+            vertical-align: middle;
+        }
+        .answerqm{
+            vertical-align: middle;
+            color: #5a6271;
+        }
+        .answername{
+            color: inherit;
+            font-weight: 600;
+            font-size: 15px;
+            vertical-align: middle;
+        }
+        .problem-fold{
+            width:700px;
+            word-wrap:break-word;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
+            font-size: 15px;
+            color: #1A1A1A;
+            -webkit-tap-highlight-color: rgba(26, 26, 26, 0);
+        }
+        .problem-fold p{
+            padding-bottom: 15px;
+        }
+        .problem-answer,.problem-zan,.answer-time{
+            padding:4px 0;
+        }
+        .zantong,.problem-zan,.answer-time{
+            color: #8590A6;
+        }
+        .fold-button{
+            cursor:pointer;
+            color: #175199;
+        }
+        .main-right{
+            float:right;
+            width:246px;
+        }
+        .gzxx{
+            background: #ffffff;
+            box-shadow: 0 1px 1px #c6d5ec;
+            background-clip: content-box;
+        }
+        .gzxx button{
+            width:121px;
+            border: none;
+            color:#8590A6;
+            background: #ffffff;
+            height:74px;
+        }
     </style>
 </head>
 <body>
@@ -127,6 +238,90 @@
             </div>
         </div>
     </div>
+    <div class="main-left">
+        <div class="title">
+            <ul class="nav">
+                <li class="item"><a style="border-bottom: 3px solid #FCC9C9;font-weight: 600;" href="/index">动态</a></li>
+                <li class="item"><a href="/index">回答</a></li>
+                <li class="item"><a href="/index">提问</a></li>
+                <li class="item"><a href="/index">收藏</a></li>
+                <li class="item"><a href="/index">关注</a></li>
+            </ul>
+        </div>
+        <div class="bankuai">
+            <h4>我的动态</h4>
+        </div>
+        <div class="main-problem">
+            <div class="problem">
+                <div class="zantong">
+                    您赞同了该回答
+                </div>
+                <h2 class="problem-title">你班主任说过最让你难忘的一句话是什么？</h2>
+                <div class="problem-answer">
+                    <a>
+                        <img class="Avatar AuthorInfo-avatar" width="24" height="24" src="/img/touxiang.jpg" />
+                        <span class="answername">  夏木</span>
+                        <span class="answerqm">断剑重铸之日，骑士归来之时</span>
+                    </a>
+                </div>
+                <div class="problem-zan">
+                    <span>0</span>人赞同了该回答
+                </div>
+                <div class="problem-fold">
+                    <p>jgijgijgkajdojhiodjgkdjakjgkdjaksjhkejfaijgjgjksjgijdfiohajdksjgaidsjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjagiajfksjgggggggggkdfjgggggggggggggggggglskjg</p>
+                    <p>jgijgj啊啊啊啊啊啊啊啊啊啊啊7gugyfgfg啊啊啊ijgijgij以及高级挤公交四大金刚卡萨就赶快啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+                </div>
+                <div class="controlfold">
+
+                </div>
+                <div class="answer-time">
+                    发布于  <span>2018-01-10</span>
+                </div>
+                <div class="problem-footer">
+                    <button class="problem-dianzan" style="background: #FCC9C9;color:#ffffff;padding: 0 12px;" isdz="false"><i class="layui-icon layui-icon-praise"></i> <span>34</span></button>
+                    <button class="problem-pinglun"><i class="layui-icon layui-icon-reply-fill"></i> <span>34条评论</span></button>
+                    <button class="problem-shoucang" style="margin-left: 0px;"><i class="layui-icon layui-icon-star"></i> <span>收藏</span></button>
+                </div>
+            </div>
+            <div class="problem">
+                <div class="zantong">
+                    您赞同了该回答
+                </div>
+                <h2 class="problem-title">你班主任说过最让你难忘的一句话是什么？</h2>
+                <div class="problem-answer">
+                    <a>
+                        <img class="Avatar AuthorInfo-avatar" width="24" height="24" src="/img/touxiang.jpg" />
+                        <span class="answername">  夏木</span>
+                        <span class="answerqm">断剑重铸之日，骑士归来之时</span>
+                    </a>
+                </div>
+                <div class="problem-zan">
+                    <span>0</span>人赞同了该回答
+                </div>
+                <div class="problem-fold">
+                    <p>aghifjgi还记得高i家啊看个JOIA挂机看到股价几个</p>
+                    <p>根据奥克斯宫颈癌及哦啊接的骨灰级按估计回家机构</p>
+                </div>
+                <div class="controlfold">
+
+                </div>
+                <div class="answer-time">
+                    发布于  <span>2018-01-10</span>
+                </div>
+                <div class="problem-footer">
+                    <button class="problem-dianzan" style="background: #FCC9C9;color:#ffffff;padding: 0 12px;" isdz="true"><i class="layui-icon layui-icon-praise"></i> <span>34</span></button>
+                    <button class="problem-pinglun"><i class="layui-icon layui-icon-reply-fill"></i> <span>34条评论</span></button>
+                    <button class="problem-shoucang" style="margin-left: 0px;"><i class="layui-icon layui-icon-star"></i> <span>收藏</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-right">
+        <div class="gzxx">
+            <button style="border-right: 1px solid #c6d5ec;">关注了</button>
+            <button>关注者</button>
+        </div>
+    </div>
 </div>
 <script src="/layui/layui.js"></script>
 <script type="text/javascript">
@@ -154,8 +349,38 @@
             $("#chakan").html(" 查看详细资料")
         }
     };
+    function show()
+    {
+        $(".problem-fold").each(function (i,val) {
+
+            var text = $(".problem-fold")[i].innerHTML;
+            var clientheight =parseInt($(".problem-fold")[i].clientHeight);
+            var newBox = document.createElement("div");
+            var btn = document.createElement("a");
+            btn.className += "fold-button";
+            btn.innerHTML = "";
+            if($(".problem-fold")[i].clientHeight > 50){
+                btn.innerHTML = "...显示全部";
+                $(".problem-fold")[i].style.height = 50 + "px";
+            }
+            btn.onclick = function(){
+                if(btn.innerHTML == "...显示全部")
+                {
+                    btn.innerHTML = "收起";
+                    $(".problem-fold")[i].style.height = clientheight + "px";
+                }
+                else
+                {
+                    btn.innerHTML = "...显示全部";
+                    $(".problem-fold")[i].style.height = 50 + "px";
+                }
+            }
+            $(".controlfold")[i].appendChild(btn);
+        })
+    }
     $(function () {
         $("header").load("/pages/common/header.html");
+        show();
     })
 </script>
 </body>
