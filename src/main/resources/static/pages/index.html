@@ -80,7 +80,12 @@
             font-size: 15px;
             vertical-align: middle;
         }
-
+        .hfanswer{
+            color: inherit;
+            font-weight: 600;
+            font-size: 15px;
+            vertical-align: middle;
+        }
         .problem-fold{
             width:700px;
             word-wrap:break-word;
@@ -102,6 +107,44 @@
         .fold-button{
             cursor:pointer;
             color: #175199;
+        }
+        .pinglun{
+            box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
+            border-radius: 2px;
+        }
+        .pinglun .plsl,.hfsl{
+            border-bottom: 1px solid #F6F6F6;
+        }
+        .pinglun h3,.hfsl h3{
+            font-weight: 600;
+            padding:10px 20px;
+            font-size:15px;
+        }
+        .pinglun-body{
+            padding:0 20px;
+        }
+        .pler{
+            padding: 15px 0;
+            border-bottom: 1px solid #F6F6F6;
+        }
+        .pler-body{
+            width:650px;
+            word-wrap:break-word;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
+            font-size: 15px;
+            color: #1A1A1A;
+            -webkit-tap-highlight-color: rgba(26, 26, 26, 0);
+        }
+        .pler-body p{
+            padding: 10px 0;
+        }
+        .pler-footer a{
+            color: #8590A6;
+            margin-right: 20px;
+        }
+        .pler-footer i{
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -140,9 +183,50 @@
                     发布于  <span>2018-01-10</span>
                 </div>
                 <div class="problem-footer">
-                    <button class="problem-dianzan" style="background: #FCC9C9;color:#ffffff;padding: 0 12px;" isdz="false"><i class="layui-icon layui-icon-praise"></i> <span>34</span></button>
-                    <button class="problem-pinglun"><i class="layui-icon layui-icon-reply-fill"></i> <span>34条评论</span></button>
-                    <button class="problem-shoucang" style="margin-left: 0px;"><i class="layui-icon layui-icon-star"></i> <span>收藏</span></button>
+                    <button class="problem-dianzan" style="background: #FCC9C9;color:#ffffff;padding: 0 12px;" isdz="false" onclick="zantong(this)"><i class="layui-icon layui-icon-praise"></i> <span>34</span></button>
+                    <button class="problem-pinglun" onclick="pinglun()"><i class="layui-icon layui-icon-reply-fill"></i> <span>34条评论</span></button>
+                    <button class="problem-shoucang" style="margin-left: 0px;" onclick="shoucang(this)" issc="true"><i class="layui-icon layui-icon-rate-solid"></i> <span>收藏</span></button>
+                </div>
+                <div class="pinglun">
+                    <div class='plsl'>
+                        <h3><span>834</span> 条评论</h3>
+                    </div>
+                    <div class="pinglun-body">
+                        <div class="pler">
+                            <div class="pler-header">
+                                <a>
+                                    <img class="Avatar AuthorInfo-avatar" width="24" height="24" src="/img/touxiang.jpg" />
+                                    <span class="answername">  夏木</span>
+                                </a>
+                            </div>
+                            <div class="pler-body">
+                                <p>jgijgijgkajdojhiodjgkdjakjgkdjaksjhkejfaijgjgjksjgijdfiohajdksjgaidsjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjagiajfksjgggggggggkdfjgggggggggggggggggglskjg</p>
+                                <p>jgijgj啊啊啊啊啊啊啊啊啊啊啊7gugyfgfg啊啊啊ijgijgij以及高级挤公交四大金刚卡萨就赶快啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+                            </div>
+                            <div class="pler-footer">
+                                <a class="pler-dianzan" isdz="true" onclick="dianzan(this)"><i class="layui-icon layui-icon-praise"> </i> <span>34</span></a>
+                                <a class="pler-chakan"><i class="layui-icon layui-icon-dialogue"> </i>查看回复</a>
+                                <a class="pler-huifu"><i class="layui-icon layui-icon-chat"> </i>回复</a>
+                            </div>
+                        </div>
+                        <div class="pler">
+                            <div class="pler-header">
+                                <a>
+                                    <img class="Avatar AuthorInfo-avatar" width="24" height="24" src="/img/touxiang.jpg" />
+                                    <span class="answername">  夏木</span>
+                                </a>
+                            </div>
+                            <div class="pler-body">
+                                <p>jgijgijgkajdojhiodjgkdjakjgkdjaksjhkejfaijgjgjksjgijdfiohajdksjgaidsjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjagiajfksjgggggggggkdfjgggggggggggggggggglskjg</p>
+                                <p>jgijgj啊啊啊啊啊啊啊啊啊啊啊7gugyfgfg啊啊啊ijgijgij以及高级挤公交四大金刚卡萨就赶快啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+                            </div>
+                            <div class="pler-footer">
+                                <a class="pler-dianzan" isdz="false" onclick="dianzan(this)"><i class="layui-icon layui-icon-praise"> </i> <span>34</span></a>
+                                <a class="pler-chakan" onclick="chakanhuifu()"><i class="layui-icon layui-icon-dialogue"> </i>查看回复</a>
+                                <a class="pler-huifu"><i class="layui-icon layui-icon-chat"> </i>回复</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="problem">
@@ -168,9 +252,9 @@
                     发布于  <span>2018-01-10</span>
                 </div>
                 <div class="problem-footer">
-                    <button class="problem-dianzan" style="background: #FCC9C9;color:#ffffff;padding: 0 12px;" isdz="true"><i class="layui-icon layui-icon-praise"></i> <span>34</span></button>
+                    <button class="problem-dianzan" style="background: #FCC9C9;color:#ffffff;padding: 0 12px;" isdz="true" onclick="zantong(this)"><i class="layui-icon layui-icon-praise"></i> <span>34</span></button>
                     <button class="problem-pinglun"><i class="layui-icon layui-icon-reply-fill"></i> <span>34条评论</span></button>
-                    <button class="problem-shoucang" style="margin-left: 0px;"><i class="layui-icon layui-icon-star"></i> <span>收藏</span></button>
+                    <button class="problem-shoucang" style="margin-left: 0px;" onclick="shoucang(this)" issc="false"><i class="layui-icon layui-icon-rate-solid"></i> <span>收藏</span></button>
                 </div>
             </div>
         </div>
@@ -183,43 +267,42 @@
 </div>
 
 <script src="/layui/layui.js"></script>
+<script src="/js/common.js"></script>
 <script type="text/javascript">
-    function show()
-    {
-        $(".problem-fold").each(function (i,val) {
+    function chakanhuifu(){
+        layui.use('layer', function(){
+            var layer = layui.layer;
 
-        var text = $(".problem-fold")[i].innerHTML;
-        var clientheight =parseInt($(".problem-fold")[i].clientHeight);
-        var newBox = document.createElement("div");
-        var btn = document.createElement("a");
-        btn.className += "fold-button";
-        btn.innerHTML = "";
-        if($(".problem-fold")[i].clientHeight > 50){
-            btn.innerHTML = "...显示全部";
-            $(".problem-fold")[i].style.height = 50 + "px";
-        }
-        btn.onclick = function(){
-            if(btn.innerHTML == "...显示全部")
-            {
-                btn.innerHTML = "收起";
-                $(".problem-fold")[i].style.height = clientheight + "px";
-            }
-            else
-            {
-                btn.innerHTML = "...显示全部";
-                $(".problem-fold")[i].style.height = 50 + "px";
-            }
-        }
-        $(".controlfold")[i].appendChild(btn);
-        })
+            layer.open({
+                title: '查看对话',
+                area: ['710px'],
+                offset: '80px',
+                btn: [],
+                content: "<div class='pler'><div class='pler-header'><a><img class='Avatar AuthorInfo-avatar' width='24' height='24' src='/img/touxiang.jpg' /><span class='answername'>  夏木</span></span></a></div><div class='pler-body'><p>jgijgijgkajdojhiodjgkdjakjgkdjaksjhkejfaijgjgjksjgijdfiohajdksjgaidsjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjagiajfksjgggggggggkdfjgggggggggggggggggglskjg</p><p>jgijgj啊啊啊啊啊啊啊啊啊啊啊7gugyfgfg啊啊啊ijgijgij以及高级挤公交四大金刚卡萨就赶快啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p></div><div class='pler-footer'><a class='pler-huifu'><i class='layui-icon layui-icon-chat'> </i>回复</a></div></div><div class='hfsl'><h3><span>834</span> 条回复</h3></div><div class='pler'><div class='pler-header'><a><img class='Avatar AuthorInfo-avatar' width='24' height='24' src='/img/touxiang.jpg' /><span class='answername'>  夏木</span></a> 回复 <span class='hfanswer'>夏木</span></div><div class='pler-body'><p>jgijgijgkajdojhiodjgkdjakjgkdjaksjhkejfaijgjgjksjgijdfiohajdksjgaidsjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjagiajfksjgggggggggkdfjgggggggggggggggggglskjg</p><p>jgijgj啊啊啊啊啊啊啊啊啊啊啊7gugyfgfg啊啊啊ijgijgij以及高级挤公交四大金刚卡萨就赶快啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p></div><div class='pler-footer'><a class='pler-huifu'><i class='layui-icon layui-icon-chat'> </i>回复</a></div></div>"
+            });
+        });
     }
     $(function () {
         $("header").load("/pages/common/header.html");
         $(".problem-dianzan").each(function (i,val) {
             if($(this).attr("isdz")=="true"){
-                $(this).find("span").html("已赞同"+$(this).find("span").html());
+                $(this).find("span").text("已赞同"+$(this).find("span").text());
             }else{
-                $(this).find("span").html("赞同"+$(this).find("span").html());
+                $(this).find("span").text("赞同"+$(this).find("span").text());
+            }
+        });
+        $(".problem-shoucang").each(function (i,val) {
+            if($(this).attr("issc")=="true"){
+                $(this).find("i").css('color','yellow');
+            }else{
+                $(this).find("i").css('color','#8590A6');
+            }
+        });
+        $(".pler-dianzan").each(function (i,val) {
+            if($(this).attr("isdz")=="true"){
+                $(this).css("color","yellow");
+            }else{
+                $(this).css("color","#8590A6");
             }
         });
         show();

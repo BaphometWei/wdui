@@ -1,7 +1,7 @@
 body{
     background: #f3f3f3;
 }
-a{
+a,button{
     cursor: pointer;
 }
 .header{

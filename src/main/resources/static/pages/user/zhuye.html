@@ -177,6 +177,7 @@
             color:#8590A6;
             background: #ffffff;
             height:74px;
+            cursor: pointer;
         }
 
     </style>
@@ -254,9 +255,6 @@
         </div>
         <div class="main-problem">
             <div class="problem">
-                <div class="zantong">
-                    您赞同了该回答
-                </div>
                 <h2 class="problem-title">你班主任说过最让你难忘的一句话是什么？</h2>
                 <div class="problem-answer">
                     <a>
@@ -279,15 +277,12 @@
                     发布于  <span>2018-01-10</span>
                 </div>
                 <div class="problem-footer">
-                    <button class="problem-dianzan" style="background: #FCC9C9;color:#ffffff;padding: 0 12px;" isdz="false"><i class="layui-icon layui-icon-praise"></i> <span>34</span></button>
+                    <button class="problem-dianzan" style="background: #FCC9C9;color:#ffffff;padding: 0 12px;" isdz="false" onclick="zantong(this)"><i class="layui-icon layui-icon-praise"></i> <span>34</span></button>
                     <button class="problem-pinglun"><i class="layui-icon layui-icon-reply-fill"></i> <span>34条评论</span></button>
-                    <button class="problem-shoucang" style="margin-left: 0px;"><i class="layui-icon layui-icon-star"></i> <span>收藏</span></button>
+                    <button class="problem-shoucang" style="margin-left: 0px;" onclick="shoucang(this)" issc="true"><i class="layui-icon layui-icon-rate-solid"></i> <span>收藏</span></button>
                 </div>
             </div>
             <div class="problem">
-                <div class="zantong">
-                    您赞同了该回答
-                </div>
                 <h2 class="problem-title">你班主任说过最让你难忘的一句话是什么？</h2>
                 <div class="problem-answer">
                     <a>
@@ -310,21 +305,22 @@
                     发布于  <span>2018-01-10</span>
                 </div>
                 <div class="problem-footer">
-                    <button class="problem-dianzan" style="background: #FCC9C9;color:#ffffff;padding: 0 12px;" isdz="true"><i class="layui-icon layui-icon-praise"></i> <span>34</span></button>
+                    <button class="problem-dianzan" style="background: #FCC9C9;color:#ffffff;padding: 0 12px;" isdz="true" onclick="zantong(this)"><i class="layui-icon layui-icon-praise"></i> <span>34</span></button>
                     <button class="problem-pinglun"><i class="layui-icon layui-icon-reply-fill"></i> <span>34条评论</span></button>
-                    <button class="problem-shoucang" style="margin-left: 0px;"><i class="layui-icon layui-icon-star"></i> <span>收藏</span></button>
+                    <button class="problem-shoucang" style="margin-left: 0px;" onclick="shoucang(this)" issc="false"><i class="layui-icon layui-icon-rate-solid"></i> <span>收藏</span></button>
                 </div>
             </div>
         </div>
     </div>
     <div class="main-right">
         <div class="gzxx">
-            <button style="border-right: 1px solid #c6d5ec;">关注了</button>
-            <button>关注者</button>
+            <button style="border-right: 1px solid #c6d5ec;">关注了</br><span class="gzsl">0</span></button>
+            <button>关注者</br><span class="bgzsl">0</span></button>
         </div>
     </div>
 </div>
 <script src="/layui/layui.js"></script>
+<script src="/js/common.js"></script>
 <script type="text/javascript">
     function guanzhu() {
         if($("#guanzhu").html()=="取消关注"){
@@ -350,37 +346,24 @@
             $("#chakan").html(" 查看详细资料")
         }
     };
-    function show()
-    {
-        $(".problem-fold").each(function (i,val) {
 
-            var text = $(".problem-fold")[i].innerHTML;
-            var clientheight =parseInt($(".problem-fold")[i].clientHeight);
-            var newBox = document.createElement("div");
-            var btn = document.createElement("a");
-            btn.className += "fold-button";
-            btn.innerHTML = "";
-            if($(".problem-fold")[i].clientHeight > 50){
-                btn.innerHTML = "...显示全部";
-                $(".problem-fold")[i].style.height = 50 + "px";
-            }
-            btn.onclick = function(){
-                if(btn.innerHTML == "...显示全部")
-                {
-                    btn.innerHTML = "收起";
-                    $(".problem-fold")[i].style.height = clientheight + "px";
-                }
-                else
-                {
-                    btn.innerHTML = "...显示全部";
-                    $(".problem-fold")[i].style.height = 50 + "px";
-                }
-            }
-            $(".controlfold")[i].appendChild(btn);
-        })
-    }
     $(function () {
         $("header").load("/pages/common/header.html");
+        $(".problem-dianzan").each(function (i,val) {
+            if($(this).attr("isdz")=="true"){
+                $(this).find("span").text("已赞同"+$(this).find("span").text());
+            }else{
+                $(this).find("span").text("赞同"+$(this).find("span").text());
+            }
+        });
+        $(".problem-shoucang").each(function (i,val) {
+            if($(this).attr("issc")=="true"){
+                $(this).find("i").css('color','yellow');
+            }else{
+                $(this).find("i").css('color','#8590A6');
+            }
+        });
+
         show();
     })
 </script>
